@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sign Up</title>
+  <style>
+  body {
+    margin-left:20px ;
+    background-color: #ffffff;
+}
+
+  h1 {
+    color: blue;
+    padding: 20px;
+    text-decoration: underline;
+}
+
+  div {
+    width: 170px;
+    margin-left:  500px;
+    margin-bottom: 300px;
+    height: 387px;
+
+    background-color: #eeeeee;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 1px;
+    border-width: 0px;
+    border-style:solid ;
+    border-radius: 25px;
+    border-color:black ;
+   
+}
+
+.errors {
+  border-width: 2px;
+    border-style:solid ;
+    border-color:red ;
+    color: red;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Sign up for free</h1>
+  <div>
+   
+  <form method="POST" action="/signup/">     
+      <p><label> Gmail:</label><input name="gmail" type="email" value="" />                       </p>
+      
+      <p><label> Gendre:</label><input name="gendre" type="text" value="" />                      </p>
+
+      <p><label> First Name:</label><input name="firstName" type="text" value="" />               </p>
+
+      <p><label> Last Name:</label><input name="lastName" type="text" value="" />                 </p>
+
+      <p><label> Nation:</label><input name="nation" type="text" value="" />                      </p>
+      
+      <p><label> Password:</label><input name="password" type="password" value="" />              </p>
+
+      <p><label> Verify password:</label><input name="verifyPassword" type="password" value="" /> </p>
+
+      <input type="submit" value="sign up" />
+
+  </form>
+<p class ="errors">Error: </p>
+</div>
+</body>
+</html>
