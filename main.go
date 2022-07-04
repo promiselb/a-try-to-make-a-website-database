@@ -56,8 +56,8 @@ const port string = ":8080"
 var (
 	errInvalidPassword              = errors.New("the password is not as the verified one?")
 	errNoRegisteredOrDeletedAccount = errors.New("no account registered with this gmail? Make one?")
-	errLostOrDeletedData            = errors.New("lost or deletd data? Visit your actions log?")
-	errAlreadyOccupiedGmail         = errors.New("an account already registered with the given gmail? User another one or check your gmail links?")
+	errLostOrDeletedData            = errors.New("lost or deleted data? Visit your actions log?")
+	errAlreadyOccupiedGmail         = errors.New("an account already registered with the given gmail? Use another one or check your gmail links?")
 )
 
 type Name string
@@ -427,7 +427,7 @@ func welcome(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/welcome/", welcome)
+	http.HandleFunc("/welcome/", welcome) // we will use github.com/gorilla/mux later at least the thing is working.
 	http.HandleFunc("/signup/", signUp)
 	http.HandleFunc("/login/", logIn)
 
@@ -548,5 +548,6 @@ func NewUser(firstname, lastname, nation Name, gendre Gendre, gmail Gmail, passw
 		VIPSubscription: sub,
 		Gmail:           gmail,
 		Password:        password,
+		ID: rand.Intn(1000), // we will use uuid package later.
 	}
 }
