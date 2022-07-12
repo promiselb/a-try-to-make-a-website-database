@@ -7,6 +7,6 @@ And <a href="github.com/google/uuid">uuid</a> to give a unique identifier to eac
  
  
  In the <a href="https://github.com/promiselb/a-try-to-make-a-website-database/edit/updated-version-with-gorilla/mux-and-uuid/main.go">main package</a>
- We've set the port which the our pc listens on to host the application and redirects the incoming requests to their handlers if needed.
+ We've set the port which our pc listens on to host the application and redirects the incoming requests to their handlers if needed.
  
  ![image](https://user-images.githubusercontent.com/107135539/178576751-9490dd01-0e43-4863-a491-c16ba5d263a2.png)
