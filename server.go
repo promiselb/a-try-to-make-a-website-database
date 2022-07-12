@@ -252,11 +252,11 @@ func (srv *Server) SignUp() http.HandlerFunc {
 			if err != nil {
 				log.Fatal(err)
 			}
-
-			http.ServeFile(w, r, "C://Go/src/golang-book/1.18/website/html/signUpAccepted.html")
+			redirectURL := fmt.Sprintf(`http://localhost%s/login/%s`, Port, gmail)
+			http.Redirect(w, r, redirectURL, http.StatusSeeOther)
 
 		default:
-			fmt.Fprintf(w, "Only GET and POST methods are supported.")
+			fmt.Fprintf(w, "No other methods are supported so far.")
 		}
 	}
 }
@@ -396,12 +396,12 @@ func (srv *Server) LogIn() http.HandlerFunc {
 			if err != nil {
 				log.Fatal(err)
 			}
+
 			redirectURL := fmt.Sprintf(`http://localhost%s/login/%s`, Port, gmail)
-			fmt.Println(redirectURL)
 			http.Redirect(w, r, redirectURL, http.StatusSeeOther)
 
 		default:
-			fmt.Fprintf(w, "Only GET and POST methods are supported.")
+			fmt.Fprintf(w, "No other methods are supported so far.")
 		}
 	}
 }
@@ -441,3 +441,4 @@ func (srv *Server) Welcome() http.HandlerFunc {
 		http.ServeFile(w, r, htmlPagesPath+"welcome.html")
 	}
 }
+
