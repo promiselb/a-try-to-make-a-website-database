@@ -32,6 +32,8 @@ const (
 	Week_inputType           = "week"
 )
 
+var PageSources = "C://HtmlPages/"
+
 func Html(s string) string {
 	return "<html>" + s + "</html>"
 }
