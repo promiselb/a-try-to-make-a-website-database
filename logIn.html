@@ -5,52 +5,47 @@
     <title>Log in</title>
 <style>
    body {
-	margin-left:20px ;
-	background-color: #ffffff;
-	}
-	
-	h1 {
-	color: blue;
-	padding: 20px;
-	text-decoration: underline;
-	}
-	
-	div {
-	width: 170px;
-	margin-left:  500px;
-	margin-bottom: 300px;
-	height: 387px;
-	
-	background-color: #eeeeee;
-	
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-bottom: 5px;
-	padding-top: 1px;
-	border-width: 0px;
-	border-style:solid ;
-	border-radius: 25px;
-	border-color:black ;
-	
-	}
-	
-	.errors {
-	border-width: 2px;
-	  border-style:solid ;
-	  border-color:red ;
-	  color: red;
-	}
+    margin-left:20px ;
+    background-color: #ffffff;
+}
+
+  h1 {
+    color: blue;
+    padding: 20px;
+    text-decoration: underline;
+}
+
+  #myForm {
+    width: 170px;
+    margin-left:  500px;
+
+    background-color: #eeeeee;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    border-style:solid ;
+}
+
+.errors {
+    border-width: 2px;
+    margin-right: 400px;
+    margin-left: 400px;
+    border-style:solid ;
+    border-color:red ;
+    color: red;
+}
 </style>
 </head>
 <body>
     <h1>Log in</h1>
 
-    <form method="POST" action="/login/">
+    <form id="myForm" method="POST" action="/login">
         <p><label> Gmail:</label><input name="gmail" type="email" value="" />                       </p>
 
         <p><label> Password:</label><input name="password" type="password" value="" />              </p>
 
-       <a> <input type="submit" value="log in" /> </a>
+        <input type="submit" value="log in" />
     </form>
 </body>
 
